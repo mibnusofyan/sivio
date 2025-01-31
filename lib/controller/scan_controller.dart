@@ -10,7 +10,7 @@ class SignDetectionController extends GetxController {
   late Interpreter interpreter;
   RxBool isProcessing = false.obs;
   RxString detectedText = "".obs;
-  final int modelInputSize = 224; // Sesuaikan dengan model Anda
+  final int modelInputSize = 224;
 
   @override
   void onInit() {
@@ -34,14 +34,11 @@ class SignDetectionController extends GetxController {
 
     isProcessing.value = true;
     try {
-      // 1. Konversi frame kamera ke format yang bisa diproses
       final processedImage = await preprocessFrame(frame);
       if (processedImage == null) return;
 
-      // 2. Jalankan deteksi
       final result = await runInference(processedImage);
 
-      // 3. Update UI dengan hasil
       updateDetectionResult(result);
     } catch (e) {
       print('Error processing frame: $e');
@@ -136,7 +133,7 @@ class SignDetectionController extends GetxController {
       // Prepare input tensor
       var input = inputData.reshape([1, modelInputSize, modelInputSize, 3]);
       // Prepare output tensor (sesuaikan dengan output shape model Anda)
-      var output = List.filled(1 * 11, 0).reshape([1, 11]);
+      var output = List.filled(1 * 31, 0).reshape([1, 31]);
 
       // Run inference
       interpreter.run(input, output);
@@ -185,6 +182,26 @@ class SignDetectionController extends GetxController {
       8: "kasih",
       9: "maaf",
       10: "tolong",
+      11: "ya",
+      12: "makan",
+      13: "minum",
+      14: "jalan",
+      15: "rumah",
+      16: "dingin",
+      17: "jam",
+      18: "teman",
+      19: "ayah",
+      20: "ibu",
+      21: "baca",
+      22: "sepatu",
+      23: "handphone",
+      24: "hujan",
+      25: "foto",
+      26: "sayur",
+      27: "meja",
+      28: "saya",
+      29: "kamu",
+      30: "pergi",
       // Tambahkan mapping lainnya
     };
 
@@ -211,7 +228,7 @@ class SignDetectorView extends StatelessWidget {
     final cameras = await availableCameras();
     cameraController = CameraController(
       cameras[1], // Using front camera
-      ResolutionPreset.medium,
+      ResolutionPreset.low,
       enableAudio: false,
       imageFormatGroup: ImageFormatGroup.yuv420,
     );
