@@ -1,0 +1,11 @@
+0 0
+1 1
+2 2
+3 5
+4 selamat
+5 pagi
+6 tidur
+7 terima
+8 kasih
+9 maaf
+10 tolong
