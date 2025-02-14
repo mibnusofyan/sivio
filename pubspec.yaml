@@ -14,14 +14,54 @@ dependencies:
   permission_handler: ^11.3.1
   tflite_flutter: ^0.11.0
   image: ^4.5.2
+  image_picker: ^1.1.2
+  speech_to_text: ^7.0.0
+  flutter_launcher_icons: ^0.14.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
 
+flutter_launcher_icons:
+  android: 'launcher_icon'
+  ios: true
+  image_path: 'assets/logo.png'
+
 flutter:
   uses-material-design: true
   assets:
     - assets/model.tflite
     - assets/labels.txt
+    - assets/logo.png
+    - assets/dataset-img/0.png
+    - assets/dataset-img/1.jpg
+    - assets/dataset-img/2.jpg
+    - assets/dataset-img/5.jpg
+    - assets/dataset-img/selamat.jpg
+    - assets/dataset-img/pagi.jpg
+    - assets/dataset-img/tidur.jpg
+    - assets/dataset-img/terima.jpg
+    - assets/dataset-img/kasih.jpg
+    - assets/dataset-img/maaf.jpg
+    - assets/dataset-img/tolong.jpg
+    - assets/dataset-img/ya.jpg
+    - assets/dataset-img/makan.jpg
+    - assets/dataset-img/minum.jpg
+    - assets/dataset-img/jalan.jpg
+    - assets/dataset-img/rumah.png
+    - assets/dataset-img/dingin.jpg
+    - assets/dataset-img/jam.png
+    - assets/dataset-img/teman.jpg
+    - assets/dataset-img/ayah.jpg
+    - assets/dataset-img/ibu.jpg
+    - assets/dataset-img/baca.png
+    - assets/dataset-img/sepatu.png
+    - assets/dataset-img/handphone.jpg
+    - assets/dataset-img/hujan.jpg
+    - assets/dataset-img/foto.jpg
+    - assets/dataset-img/sayur.png
+    - assets/dataset-img/meja.jpg
+    - assets/dataset-img/saya.jpg
+    - assets/dataset-img/kamu.png
+    - assets/dataset-img/pergi.jpg

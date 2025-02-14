@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sivio_mobile/controller/scan_controller.dart';
+import 'package:sivio_mobile/pages/homePage.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         ),
         home: GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          home: SignDetectorView(),
+          home: HomePage(),
         ));
   }
 }
