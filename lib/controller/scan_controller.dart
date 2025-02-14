@@ -463,8 +463,11 @@ class SignDetectorView extends StatelessWidget {
                               // ),
                               // clipBehavior: Clip.hardEdge,
                               child: AspectRatio(
-                                aspectRatio: 9 / 16,
-                                child: CameraPreview(cameraController),
+                                aspectRatio: 16 / 9,
+                                child:Transform.rotate(
+                                  angle: -90 * 3.14159 / 180,
+                                  child: CameraPreview(cameraController),
+                                )
                                 // child: Transform.scale(
                                 //   scale: cameraController.value.aspectRatio,
                                 //   child: Center(
